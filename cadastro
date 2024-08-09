@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class cadastro {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+
+        System.out.println("Seja bem vindo!");
+        System.out.println("Faça seu cadastro");
+        System.out.println("_____________________________________________________________________________");
+        System.out.print("Digite seu nome de usuário:");
+        String nome = leia.nextLine();
+        System.out.print("Digite sua senha:");
+        String senha = leia.nextLine();
+        System.out.println("Cadastro feito com sucesso");
+        System.out.println("______________________________________________________________________________");
+        for (int i = 3; i > 0; i--) {
+            System.out.println("Faça seu login");
+            System.out.print("Usuário: ");
+            String u = leia.nextLine();
+            System.out.print("Senha: ");
+            String s = leia.nextLine();
+
+            if (senha.equals(s) && nome.equals(u)) {
+                System.out.println("Você logou na sua conta");
+                break;
+            } else {
+                System.out.println("Seu usuário ou senha está incorreto!");
+                System.out.println("Tente novamente");
+
+            }
+        }
+
+    }
+}
